@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://use.fontawesome.com;">
+
+    <title>BeMost Soft</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'tasarim.css' %}" />
+    <script src="{% static 'olaylar.js' %}" defer></script>
+</head>
+<body id="yukari">
+    <header>
+        <div class="genis-ekranda-ortala">
+            <a id="header-logo" href="#">
+                <img src="{% static 'images/B.png' %}" alt="Logo" />
+            </a>
+            <nav class="header-nav sadece-desktop">
+                <ul>
+                    <li><a class="nav-link" href="#">ANA SAYFA</a></li>
+                    <li><a class="nav-link" href="#hizmetler">HİZMETLERİMİZ</a></li>
+                    <li class="header-nav-daha-fazla">
+                        <a class="nav-link header-nav-daha-fazla-btn">DAHA FAZLA <i class="fas fa-caret-down"></i></a>
+                        <ul class="header-nav-daha-fazla-menu gizle">
+                            <li><a class="nav-link" href="#musteri-oykuleri">MÜŞTERİ ÖYKÜLERİ</a></li>
+                            <li><a class="nav-link" href="#sss">SIK SORULAN SORULAR</a></li>
+                            <li><a class="nav-link" href="#iletisim">İLETİŞİM</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <nav class="header-nav sadece-mobil">
+        <ul>
+            <li class="header-nav-daha-fazla">
+                <a class="nav-link header-nav-daha-fazla-btn">MENÜ <i class="fas fa-caret-down"></i></a>
+                <ul class="header-nav-daha-fazla-menu gizle">
+                    <li><a class="nav-link" href="#">ANA SAYFA</a></li>
+                    <li><a class="nav-link" href="#hizmetler">HİZMETLERİMİZ</a></li>
+                    <li><a class="nav-link" href="#musteri-oykuleri">MÜŞTERİ ÖYKÜLERİ</a></li>
+                    <li><a class="nav-link" href="#sss">SIK SORULAN SORULAR</a></li>
+                    <li><a class="nav-link" href="#iletisim">İLETİŞİM</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section id="slideshow">
+            <div class="slideshow-container">
+                <div class="slideshow-yazi">
+                    <h2>İşletmenizi tek bir uygulamadan kolayca yönetin.</h2>
+                    <a href="/login/" class="btn" id="slideshow-btn">ÜYE GİRİŞİ</a>
+                </div>
+                <div class="mySlides">Slide 1
+                    <img  src="{% static 'images/isletme.jpg' %}" alt="İşletme" />
+                </div>
+                <div class="mySlides">Slide 2
+                    <img src="{% static 'images/isletme2.jpg' %}" alt="İşletme 2" />
+                </div>
+                <div class="mySlides">Slide 3
+                    <img src="{% static 'images/isletme3.jpg' %}" alt="İşletme 3" />
+                </div>
+                <div class="mySlides">Slide 4
+                    <img src="{% static 'images/isletme4.png' %}" alt="İşletme 4" />
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
+        <section class="genis-ekranda-ortala" id="hizmetler">
+            <h2>HİZMETLERİMİZ</h2>
+            <div class="baslik-ayraci ortala"></div>
+            <div class="hizmet hizmet-sol">
+                <img src="{% static 'images/hizmet1.png' %}" alt="Hizmet 1" />
+                <h3>İşletme yönetimi</h3>
+                <p>İşletmelerin finansal yönetim, insan kaynakları, operasyonel süreçler ve stratejik planlama gibi alanlarda uzman desteği sunarak verimliliği artıran ve başarıyı garanti eden bir hizmet veriyoruz. İşletmenizin ihtiyaçlarına özel çözümlerle, sizlere güçlü ve sürdürülebilir bir yönetim deneyimi sunuyoruz.</p>
+                <a href="#" class="btn">DAHA FAZLA BİLGİ</a>
+                <div style="clear: both;"></div>
+            </div>
+        </section>
+        <section class="genis-ekranda-ortala" id="musteri-oykuleri">
+           
+  
+  <div id="musteri-oykuleri">
+    <h2>MÜŞTERİ ÖYKÜLERİ</h2>
+    <div class="musteri-oykuleri-sutun">
+        <div class="musteri-oykusu">
+            <h3>Ahmet Aksoy:</h3>
+            <p>“İşletme yönetimi alanında bu kadar profesyonel bir hizmet almak harika bir deneyim oldu. Her adımda yanımızda olduklarını hissettik ve işletmemin tüm süreçlerini kusursuz bir şekilde yönetmeye başladılar. Teşekkürler!”</p>
+          <img src="{% static 'images/musteri3.jpg' %}" alt="Ahmet Aksoy">
+        </div>
+        <div class="musteri-oykusu">
+            <h3>Ayşe Yılmaz:</h3>
+            <p>“Bu firma ile çalışmak gerçekten büyük bir şans. Operasyonel süreçlerimizdeki karmaşıklığı basitleştirdiler ve stratejik planlamamızda bize büyük katkı sağladılar. İhtiyacımız olan desteği tam zamanında ve etkili bir şekilde sundular.”</p>
+            <img src="{% static 'images/muster11.jpg' %}" alt="Ayşe Yılmaz">
+        </div>
+    </div>
+    <div class="musteri-oykuleri-sutun">
+        <div class="musteri-oykusu">
+            <h3>Leyla Koç:</h3>
+            <p>“Bu hizmeti almaya başladığımızdan beri işletmemizdeki verimlilik yüzde yüz arttı. İnsan kaynakları ve finans yönetimi konusundaki bilgileri gerçekten etkileyici. Ekibin amacı ve hızlı çözüm üretme yetenekleri bizi çok memnun etti.”</p>
+           <img src="{% static 'images/musteri2.jpg' %}" alt="Leyla Koç">
+        </div>
+        <div class="musteri-oykusu">
+            <h3>Meryem Demir:</h3>
+            <p>“İşletme yönetimi konusunda uzun süredir sıkıntı yaşamaktaydık ama bu firma ile tanıştıktan sonra işlerimiz mükemmel bir şekilde yoluna girdi. Profesyonel yaklaşımları ve etkili çözümleriyle büyük bir fark yarattılar. Kesinlikle tavsiye ederim!”</p>
+            <img src="{% static 'images/musteri55.jpg' %}" alt="Meryem Demir">
+        </div>
+    </div>
+</div>
+
+           
+        </section>
+        <div class="bolum-ayraci"></div>
+        <section class="genis-ekranda-ortala" id="sss">
+            <h2>SIK SORULAN SORULAR</h2>
+            <div class="baslik-ayraci ortala"></div>
+                   <div id="sss-icerik">
+            <button class="accordion">Nasıl üye olabilirim?</button>
+            <div class="panel">
+                <p>İletişim bilgilerimizden iletişime geçip ücret karşılığı üyeliğinizi aktive edebilirsiniz.</p>
+            </div>
+            <button class="accordion">Haftanın hangi günleri açıksınız?</button>
+            <div class="panel">
+                <p>Hafta içi her gün 09.00-17.00 arası açığız.</p>
+            </div>
+            <button class="accordion">Sizinle nasıl iletişime geçebilirim?</button>
+            <div class="panel">
+                <p>Hemen aşağıdaki iletişim formunu kullanabilirsiniz.</p>
+            </div>
+        </div>
+    </section>
+    <div class="bolum-ayraci"></div>
+    <section class="genis-ekranda-ortala" id="iletisim">
+        <h2>İLETİŞİM</h2>
+        <div class="baslik-ayraci ortala"></div>
+        <div>
+            <div class="iletisim-sutun" id="iletisim-bilgiler">
+                <p>
+                    Karatay Üniversitesi<br>
+                    Karatay Mahallesi, Yazır Caddesi No: 1<br>
+                    Konya 42030 Türkiye
+                </p><br>
+                <p><i class="fas fa-phone"></i> 05436407528 - Beyza Uğur</p>
+                <p><a href="mailto:beyzaugur000@gmail.com"><i class="fas fa-envelope"></i> kim@bemostsoft.com</a></p>
+                <p><i class="fas fa-clock"></i> Randevu ile:<br>
+                09.00-17.00 Pazartesi-Cuma<br>
+                </p>
+            </div>
+            <div class="iletisim-sutun" id="iletisim-form">
+                <input type="text" id="inp-isim" placeholder="İsminiz">
+                <input type="text" id="inp-soyisim" placeholder="Soyisminiz">
+                <input type="text" id="inp-telefon" placeholder="Telefon numaranız">
+                <input type="email" id="inp-eposta" placeholder="E-posta adresiniz">
+                <textarea id="inp-mesaj" rows="6" placeholder="Mesajınız"></textarea>
+                <input class="btn" id="gonder-btn" type="submit" value="GÖNDER">
+            </div>
+        </div>
+    </section>
+    <div class="bolum-ayraci"></div>
+    <footer class="genis-ekranda-ortala">
+        <div id="footer-sag">
+            <nav id="footer-nav">
+                <ul>
+                    <li><a class="nav-link" href="#">ANA SAYFA</a></li>
+                    <li><a class="nav-link" href="#hizmetler">HİZMETLERİMİZ</a></li>
+                    <li><a class="nav-link" href="#musteri-oykuleri">MÜŞTERİ ÖYKÜLERİ</a></li>
+                    <li><a class="nav-link" href="#sss">SIK SORULAN SORULAR</a></li>
+                    <li><a class="nav-link" href="#iletisim">İLETİŞİM</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="footer-sol">
+            <h3>BeMost Soft</h3>
+            <small>Copyright © 2024 Tüm hakları saklıdır.</small>
+            <div class="baslik-ayraci"></div>
+            <a href="#" class="sosyal-btn"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="sosyal-btn"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="sosyal-btn"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div style="clear: both;"></div>
+    </footer>
+    <a id="yukari-btn" href="#yukari"><i class="fas fa-arrow-up"></i></a>
+</body>
+</html>

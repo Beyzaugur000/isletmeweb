@@ -19,9 +19,11 @@ from django.urls import include, path # type: ignore
 from polls import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),        # admin paneli için URL
+    path('admin/', admin.site.urls), 
+    
+           # admin paneli için URL
     path('', include('polls.urls')),        # kök URL'yi polls uygulamasına yönlendir
-    path('', views.index, name='index'),   # Bu path çakışmaya neden olabilir
+   
 
 ]
 

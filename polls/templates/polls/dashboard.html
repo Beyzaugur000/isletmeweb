@@ -1,0 +1,114 @@
+{% extends 'adminlte/base.html' %} {% block content %}
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Dashboard</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Dashboard</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3 col-6">
+          <div class="small-box bg-info">
+            <div class="inner">
+              <h3>{{ categories_count }}</h3>
+              <p>Toplam Kategoriler</p>
+            </div>
+            <div class="icon">
+              <i class="fas fa-list"></i>
+            </div>
+            <a href="#" class="small-box-footer"
+              >Daha Fazla Bilgi <i class="fas fa-arrow-circle-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-6">
+          <div class="small-box bg-success">
+            <div class="inner">
+              <h3>{{ customers_count }}</h3>
+              <p>Toplam Müşteriler</p>
+            </div>
+            <div class="icon">
+              <i class="fas fa-user-friends"></i>
+            </div>
+            <a href="#" class="small-box-footer"
+              >Daha Fazla Bilgi <i class="fas fa-arrow-circle-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-6">
+          <div class="small-box bg-warning">
+            <div class="inner">
+              <h3>{{ employees_count }}</h3>
+              <p>Toplam Çalışanlar</p>
+            </div>
+            <div class="icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <a href="#" class="small-box-footer"
+              >Daha Fazla Bilgi <i class="fas fa-arrow-circle-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-6">
+          <div class="small-box bg-danger">
+            <div class="inner">
+              <h3>{{ orders_count }}</h3>
+              <p>Toplam Siparişler</p>
+            </div>
+            <div class="icon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <a href="#" class="small-box-footer"
+              >Daha Fazla Bilgi <i class="fas fa-arrow-circle-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Orders Table -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Son Siparişler</h3>
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Sipariş ID</th>
+                <th>Müşteri</th>
+                <th>Tarih</th>
+                <th>Adres</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for order in recent_orders %}
+              <tr>
+                <td>{{ order.order_id }}</td>
+                <td>{{ order.customer.company_name }}</td>
+                <td>{{ order.order_date }}</td>
+                <td>{{ order.ship_address }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}

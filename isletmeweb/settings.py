@@ -40,8 +40,8 @@ ROOT_URLCONF = 'isletmeweb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],  # Şablonlar burada
-        'APP_DIRS': True,
+        'DIRS': [BASE_DIR / 'templates'],  # Global şablon dizini
+        'APP_DIRS': True,  # Uygulama bazlı şablonları otomatik olarak algılar
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -52,6 +52,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 # WSGI application
 WSGI_APPLICATION = 'isletmeweb.wsgi.application'
@@ -73,9 +74,7 @@ DATABASES = {
 
 # Static files
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',  # Tüm statik dosyalar burada
-]
+STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Media files
@@ -90,3 +89,7 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
+# settings.py
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = 'index2'  # Başarılı giriş sonrası yönlendirilecek URL
+
